@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*!  C LASS/CLASES para aumentar especifidad */
+/*!ID otra opcion para aplicar CSS. No se puede repetir*/
+/*!----- General -----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*!------HEADER------*/
+header{
+
+background-color: black;
+padding: 15px;
+position: sticky;
+top: 0;
+display:flex ;
+justify-content: space-between;
+align-items: center;
+
+
+
+}
+
+header h1{
+color: whitesmoke;
+font-size: 60px;
+font-family: "Poppins", sans-serif;
+font-weight:50px;
+
+}
+            /*! HEADER LISTA */
+
+
+.hover-list li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    margin: 0 auto;
+    transition: width 0.2s ease-in-out;
+}
+
+.hover-list li:hover::after {
+    width: 80%; /* Subrayado expansivo */
+}
+
+header nav ul{
+   
+    list-style: none;
+    display: flex;
+   
+
+}
+
+header nav ul li a{
+text-decoration: none;
+color:whitesmoke;
+
+padding: 10px;
+}
+header nav ul li{
+
+    margin: 10px 5px 10px 5px;
+   /* margin-top: ; margen de arriba
+    margin-bottom: ;   margen de abajo
+    margin-right: ; margen  derecho
+    margin-left: ;  margen izquierdo
+    */
+
+}
+
+/*!-----MAIN-----*/
+.hero {
+    color: white;
+text-align: center;
+height: 500px;
+background-image:url("../img/Fondo\ de\ bienvenida.jpg") ;
+background-position: center;
+background-repeat: no-repeat ;
+background-size: cover;
+background-attachment: fixed;
+display: flex;
+flex-direction: column;
+justify-content:start;
+}
+.hero img{
+    height: 550px;
+}
+
+.hero h1{
+    font-size: 60px;
+}
+
+.caja{
+    padding: 20px;
+    margin: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+    
+}
+.caja div h3{
+font-size: 27px;
+
+}
+
+.caja div{
+    padding: 10px;
+    width: 50%;
+}
+.caja img{
+    margin: 10px;
+    width: 400px;
+}
+
+
+.tarjetas{
+    /*!En este ejemplo usamos los tipos de flex */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+   /*!flex-wrap: me permite que los elementos bajen y no suceda un scroll */
+ 
+}
+.tarjetas div h3{
+    margin-bottom: 20px;
+
+}
+.tarjetas div{
+    box-shadow: 11px 11px 17px -5px rgba(0,0,0,0.44);
+-webkit-box-shadow: 11px 11px 17px -5px rgba(0,0,0,0.44);
+-moz-box-shadow: 11px 11px 17px -5px rgba(0,0,0,0.44);
+    border: 2px solid black;
+    width:250px ;
+    height: 380px ;
+    text-align: center;
+    margin: 20px;
+}
+.tarjetas div img{
+    width: 250px;
+}
+
+.servicios img{
+
+    width:100px;
+}
+.servicios {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
+.fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+.fixed img{
+    width: 80px;
+}
+
+
+
+
+/*!-----FOOTER-----*/
+footer{
+    
+    background-color: rgb(211, 208, 208) ;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer h2{
+    padding: 15px;
+color: whitesmoke;
+font-size: 40px;
+font-family: "Poppins", sans-serif;
+font-weight:50px;
+text-align: left;
+}
+footer p{
+    padding: 15px;
+}
+ footer div a img{
+  
+    width: 50px;
+    height: 50px;
+   
+ }
+
+
+ /*! METODOLOGIA DE NOMBRADO */
+ /** CamelCase cuando hayan 2 palabras la segunda va a comenzar con mayuscula*/
+ /* Ejemplo: produsctosDestacados. */
+
+ /** Kebab-case separacion de palabras mediante guiones "-" */
+ /* Ejemplo: productos-destacados */
+
+ /** Snake_case separacion de palabras mediante un guion bajo "_"*/
+ /* Ejemplo: productos_destacados */
+ 
+ /** Metologia BEM separacion de palabras mediante el guion bajo doble "__"*/
+ /* Ejemplo: productos__destacados */
+ /* Modificadores de etiquetas en este ejemplo de css lo que se hace es agregarke un modificador que lo hace unico: productos__destacados--color*/
+
+/*!----MEDIA QUERIES----*/
+/*AND*/
+/* HASTA Y DESDE*/
+/* ejemplo: En este ejemplo desde 700px hasta 400px el body de la pagina cambia su fondo a negro
+ @media (max-widht:700px) and (min-width:400px){
+      body{
+            background-color: black;
+    }
+}*/
+
+/*PRINT*/
+/** Utilizando cuando se va a realizar la impresion de la pantalla*/
+/** Funcional para ocultar informacion que no queremos que se muestre*/
+/* @media print  */
+
+/*POSICION DE LA PANTALLA*/
+
+/*Pantallas HORIZONTALES*/
+/* @media (orientation:landscape){} */
+
+/*Pantalla VERTICAL*/
+/* @media (orentation:vertical){} */
+
+/* Se recomienda usar las posiciones de pantalle a sitios horientados a moviles*/
+
+
+@media (max-width: 820px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    }
+@media (max-width: 720px) {
+     .caja{
+        flex-direction: column;
+
+     }
+     .caja div{
+        width: 90%;
+       }
+    
+    }
+@media (max-width: 570px) {
+     header h1{
+        font-size: 30px;
+     }
+         }
+
+@media (max-width: 470px){
+        footer div a img{
+            width: 20px;
+            height: 20px;
+        }
+
+
+         }
+
+
+/*! ----- PSEUDO CLASE -----*/
+/* Se aplica a todos los elementos <a>
+ que tengan un atributo href definido 
+ y no hayan sido visitados */
+ /**.enlace:link{}*/
+
+ /* Se aplica cuando todos los elementos <a>
+ que tengan un atributo href definido y hayan
+ sido visitados*/
+/**.enlace:visited{}*/
+
+/* Se aplica a todos los elementos cuando el mouse
+esté posicionado sobre ellos*/
+/** EJEMPLO*/
+/*.boton:hover{
+    background-color: aqua;
+    color: black;
+} */
+
+ /* Se aplica a todos los elementos cuando 
+ se esta haciendo click sobre ellos*/
+/** EJEMPLO*/
+/* .boton:active{
+    background-color: beige;
+    color: black;
+} */
+
+/* Se aplica a todos los elementos A, excepto a los incluidos
+como elementos B*/
+/** EJEMPLO*/
+/* .contenedor div:not(.caja-3){
+    background-color: tomato;
+} */
+
+/* Con esta pseudo clase podremos aplicar sus
+estilos a todos los elementos hijos cuya posición
+sea un número "N" respecto a un padre*/
+/* .cajas div:nth-child(2){
+background-color: tomato;
+
+} */
+
+/* Si se quiere hacer a elementos pares se coloca "even"
+O si se quiere hacer a impares "odd" */
+/** EJEMPLO DE PAR */
+/* .cajas div:nth-child(even){ 
+    background-color: tomato;
+    
+    }  */
+
+/** EJEMPLO DE IMPAR */
+/* .cajas div:nth-child(odd){
+        background-color: tomato;
+        
+        }  */
+/** OTRO EJEMPLO CADA 3 */
+/* .cajas div:nth-child(3r){
+        background-color: tomato;
+        
+        }  */
+
+/*! ----- PSEUDO ELEMENTOS -----*/
+/* El Pseudo elementos la diferencia con las PSEUDO CLASES
+es mas que nada la sintaxi. La pseudo clase va a generar un cambio
+cuando se interactuan con el elemento. En el caso de los pseudo elementos
+me va a generar un cambio sin la interaccion de los usuarios */
+/** EJEMPLO */
+
+/* p::first-line{
+    color: yellow;
+}
+
+h2::first-letter{
+    color: black;
+} */
+
+
