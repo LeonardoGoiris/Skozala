@@ -15,11 +15,6 @@ background-color: black;
 padding: 15px;
 position: sticky;
 top: 0;
-display:flex ;
-justify-content: space-between;
-align-items: center;
-
-
 
 }
 
@@ -32,21 +27,43 @@ font-weight:50px;
 }
             /*! HEADER LISTA */
 
-
-.hover-list li::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #00bcd4;
-    margin: 0 auto;
-    transition: width 0.2s ease-in-out;
+.navbar-toggler {
+margin-left: 4rem;
+            
+}
+.navbar-toggler-icon{
+    background-color: none;
 }
 
-.hover-list li:hover::after {
-    width: 80%; /* Subrayado expansivo */
+.bg-body-tertiary{
+    background-color: black !important ;
+}
+.nav-link{
+    text-decoration: none;
+    color:whitesmoke;
 }
 
+
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+.logoo {  
+    width:60px;
+    height: 60px;
+    }
+
+
+/* 
 header nav ul{
    
     list-style: none;
@@ -70,7 +87,6 @@ header nav ul li{
     margin-left: ;  margen izquierdo
     */
 
-}
 
 /*!-----MAIN-----*/
 .hero {
